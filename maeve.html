@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>TSeries Flights</title>
+		
+		<!--lead the stylesheet from leaflet -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+		
+		<!-- link css sheet -->
+		<link href="maeve.css" rel="stylesheet">
+		
+		<!--load leaflet -->
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+		
+		<!--add ajax-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<!-- add items for heatmap plugin for leaflet -->
+		<script src="plugins\Leaflet.heat-gh-pages\dist\leaflet_heat.min.js"></script>
+
+		<!--script for idw map-->
+		<script src="maeve-idw.js"></script>
+
+		
+		<!-- turf -->
+		<script src='https://unpkg.com/@turf/turf/turf.min.js'></script>
+    </head>
+    <body>
+	
+		
+		
+		<div id="places-container">
+			
+			<div class="places-dropdown">
+				<input type="text" placeholder="Search Places..." id="places_input" onkeyup="SearchPlaces()" style="margin-right: 10px;">
+				
+				<div class="places-dropdown-content" id="places-dropdown-content">
+				
+				
+					<input type="checkbox" name="dropdown-group-all" checked=False class="check-all" id="checkbox-place"/>
+					<label for="checkbox-place" id="checkbox-all-label-places">Select All</label>
+				</div>
+				
+			</div>	
+			
+			<button type="button" id="places_submit">Filter</button>
+			
+		</div>
+		
+		<div id="coordinates"> </div>
+		
+		
+		<!--create map object -->
+		<div id="map" ></div>
+
+
+		
+		
+		
+		<!-- link javascript file -->
+		<script src="maeve.js"></script>
+		<script src="bundle.js"></script>
+		
+		
+		
+	</body>
+	</html>
+	
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		

@@ -1,0 +1,272 @@
+body {
+	margin: 0px;
+}
+
+#canvas {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
+#in_air {
+	text-align: left;
+	font: "Georgia";
+
+}
+
+.leaflet-popup-content {
+	min-width: 263px;
+}
+
+
+.dropdown {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+
+.dropdown-content .checkbox:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+.dropdown-content .checkbox {
+	margin-top: 10px; /*separates the items from each other in list*/
+}
+
+
+.checkbox-custom-label {
+	padding-right: 60px; /*allows you to click outside of text for dropdown*/
+	color: black;
+	font: "Georgia";
+	display: inline-block;
+}
+
+#checkbox-all-label:hover {
+	background-color: #f1f1f1;
+	
+}
+
+#checkbox-all-label {
+	padding-right: 75px; /*allows you to click outside of text for dropdown*/
+	color: black;
+	font: "Georgia";
+	display: inline-block;
+}
+
+#map {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+}
+
+#date_filter_container {
+	position: absolute;
+	z-index: 2;
+	margin: 20px;
+	border-radius: 25px;
+	background: #FBFCF8;
+	height: 50px;
+	width: 650px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+#coordinates {
+	position: fixed;
+	bottom: 29px;
+	right: 65px;
+	z-index: 2;
+	border-radius: 25px;
+	background: #FBFCF8;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#date_filter_container .input {
+	margin: 8px;
+	text-align: center;
+}
+
+#date_filter_container #date_button {
+	font: "Georgia";
+	text-align: center;
+}
+
+
+.tab {
+	width: 100%;
+	display: flex;
+	
+}
+
+.tab button {
+	align-items: center;
+	text-align: center;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s;
+	padding: 5px;
+	margin: 3px;
+	
+
+}
+
+/*change background color of buttons on hover*/
+.tab button:hover {
+	background-color: #ddd;
+}
+
+/*create active/current tablink*/
+.tab button.active {
+	background-color: #ccc;
+	display: block;
+	
+}
+
+
+
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	max-height: 100px;
+	overflow-y: auto;
+	font-size: 13px;
+}
+
+
+
+#places-container {
+	position: absolute;
+    z-index: 2;
+    margin: 10px;
+    border-radius: 25px; 
+    height: 50px;
+    width: 300px;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 275px;
+	background: rgba(255, 255, 255, 0.8);
+	color: #555;
+	display: none;
+}
+
+
+
+
+
+
+
+.places-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+  max-height: 230px;
+  overflow-y: auto;
+}
+
+
+.places-dropdown-content .checkbox:hover {background-color: #f1f1f1;}
+
+.places-dropdown:hover .places-dropdown-content {
+  display: block;
+}
+
+
+
+
+
+.places-dropdown-content .checkbox {
+	margin-top: 10px; /*separates the items from each other in list*/
+}
+
+#checkbox-all-label-places:hover {
+	background-color: #f1f1f1;
+	
+}
+
+#checkbox-all-label-places {
+	padding-right: 130px; /*allows you to click outside of text for dropdown*/
+	color: black;
+	font: "Georgia";
+	display: inline-block;
+}
+
+.legend {
+	padding: 6px 8px;
+	font: 14px Georgia;
+	background: white;
+	background: rgba(255, 255, 255, 0.8);
+	line-height: 24px;
+	color: #555;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+}
+
+.legend h3 {
+	text-align: center;
+	font-size: 15px;
+	margin: 2px 12px 8px;
+	color: #777;
+}
+
+.legend span {
+	position: relative;
+	bottom: 3px;
+}
+
+.legend i {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin: 0 8px 0 0;
+	opacity: 0.7;
+} 
+
+.heatmap-date {
+	padding: 6px 8px;
+    font: 14px Georgia;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    line-height: 24px;
+    color: #555;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    position: fixed;
+    bottom: 0px;
+    left: 155px;
+}
+
+#heatmap-date-range {
+    text-align: center;
+    font-size: 15px;
+    margin: 2px 12px 8px;
+    color: #777;
+}
